@@ -1,0 +1,19 @@
+<ion-content class="ion-padding ion-text-center">
+  <div class="logo">
+    <img src="" />
+  </div>
+  <div class="form">
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm= "ngForm">
+    <ion-item lines="none">
+      <ion-input type="email" placeholder="Enter email" name="email" ngModel></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input  placeholder="Enter Password" type="password" name="password" ngModel></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" color="dark" expand="block">Login</ion-button>
+    </form>
+  </div>
+<ion-button (click)="registerPage()" fill="clear">New? Signup here</ion-button>
+</ion-content>

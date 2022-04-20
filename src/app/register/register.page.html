@@ -1,0 +1,26 @@
+<ion-content class="ion-padding ion-text-center">
+  <div class="logo">
+    <img src="" />
+  </div>
+  <div class="form">
+    <form (ngSubmit)="onSubmit(registerForm)" #registerForm= "ngForm">
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Enter Name" name="name" ngModel></ion-input>
+    </ion-item>
+    <p *ngIf="errors.name">{{errors.name}}</p>
+    <ion-item lines="none">
+      <ion-input  placeholder="Enter Email" type="email" name="email" ngModel></ion-input>
+    </ion-item>
+    <p *ngIf="errors.email">{{errors.email}}</p>
+    <ion-item lines="none">
+      <ion-input  placeholder="Enter Password" type="password" name="password" ngModel></ion-input>
+    </ion-item>
+    <p *ngIf="errors.password">{{errors.password}}</p>
+    <ion-item lines="none">
+      <ion-input  placeholder="Confirm Password" type="password" name="password_confirmation" ngModel></ion-input>
+    </ion-item>
+    <ion-button type="submit" color="dark" expand="block">Register</ion-button>
+    </form>
+  </div>
+<ion-button (click)="loginPage()" fill="clear">You already have an account?</ion-button>
+</ion-content>
